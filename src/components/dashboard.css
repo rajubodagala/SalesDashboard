@@ -1,0 +1,35 @@
+/* .MuiTableCell-root,.MuiTableCell-root {
+    padding: 0 !important;
+  } */
+  .MuiPaper-root {
+    background-color:rgb(32, 42, 59) !important;
+    color: rgb(128, 145, 171) !important;
+  }
+
+  .MuiIconButton-root, .MuiTableCell-head, .MaterialDatatableToolbarSelect-deleteIcon-79,.MuiTablePagination-caption,.MuiSelect-icon,.MuiFormLabel-root
+  {
+    color: rgb(128, 145, 171) !important;
+  }
+
+  .MuiTableCell-body{
+    color: rgb(255, 255, 255) !important;
+  }
+
+  .MuiTableCell-root
+  {
+    border-bottom : none !important;
+  }
+
+  .MaterialDatatableFilter-root-59
+  {
+      background-color: rgb(19,25,36,1);
+  }
+
+  .MaterialDatatableFilter-title-78 ,.MuiTableSortLabel-root:hover
+  {
+    color: rgb(128, 145, 171) !important;
+}
+.MaterialDatatableHeadCell-sortActive-28,.MuiTableSortLabel-root,.MuiTableSortLabel-active,.MuiTableSortLabel-root,.MuiTableSortLabel-active, .MuiTableSortLabel-icon
+{
+    color: rgb(136 192 232) !important;
+}
