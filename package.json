@@ -13,8 +13,6 @@
     "chart.js": "^3.0.0",
     "date-fns": "^2.22.1",
     "dayjs": "^1.10.5",
-    "fusioncharts": "^3.13.3-sr.1",
-    "fusionmaps": "^3.13.1-sr.1",
     "install": "^0.13.0",
     "joi-browser": "^13.4.0",
     "lodash": "^4.17.21",
