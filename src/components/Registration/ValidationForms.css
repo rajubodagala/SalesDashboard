@@ -6,3 +6,8 @@
   padding: 14px 14px !important;
   background-color: white !important;
 } */
+
+.card-header
+{
+  background-color: rgb(241 230 167) !important;
+}

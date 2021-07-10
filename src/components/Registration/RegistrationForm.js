@@ -20,6 +20,7 @@ import {
 import { getCustomers } from "./RegistrationService";
 import { getItems } from "./RegistrationService";
 import auth from "../Pages/authService";
+import './ValidationForms.css'
 
 
 class RegistrationForm extends FormFunc {

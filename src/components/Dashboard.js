@@ -10,6 +10,23 @@ import auth from "./Pages/authService";
 import TranTable from "../components/Grid/TranTable";
 import RegistrationButton from "./Registration/RegistrationButton"
 import "../components/dashboard.css";
+
+var d = new Date();
+var month = new Array();
+month[0] = "JAN";
+month[1] = "FEB";
+month[2] = "MAR";
+month[3] = "APR";
+month[4] = "MAY";
+month[5] = "JUN";
+month[6] = "JUL";
+month[7] = "AUG";
+month[8] = "SEP";
+month[9] = "OCT";
+month[10] = "NOV";
+month[11] = "DEC";
+var currentMonth = month[d.getMonth()];
+
 const piedata1 = () => {
   return {
     labels: ["Blue", "Green", "Yellow", "Red"],
@@ -131,6 +148,7 @@ class Dashboard extends Component {
 
     this.setState({ modal: false });
   };
+ 
   populateDashboard = async (path, saleDate, redrawp) => {
     try {
       const { data } = await getTransactions(path, saleDate);
@@ -157,6 +175,10 @@ class Dashboard extends Component {
           list.qRed,
         ];
       });
+console.log(linedatao)
+      data.result[2].map((list, index) => {
+        console.log(list)
+      });
 
       this.setState({
         transaction: tranobj,
@@ -176,7 +198,7 @@ class Dashboard extends Component {
   }; 
   render() {
     const { transaction, summary, piedata, linedata } = this.state;
-    console.log(linedata);
+ 
     return (
       <Container>
         {/* static navbar - bottom */}
