@@ -24,11 +24,12 @@ const Header = (props) => {
        Sales Dashboard
      </Container>
      <Container className="navbar-nav ml-auto">
-       <Container className="user-detail-section">
+       <Container className="user-detail-section">     
          <span className="pr-2">Hi, {auth.getCurrentUser()}</span>
          <span className="img-container" onClick={handleClick}>
            <img src={UserImg} className="rounded-circle" alt="user" />
          </span>
+       
          <Menu
   id="simple-menu"
   anchorEl={anchorEl}

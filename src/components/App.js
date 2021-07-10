@@ -1,6 +1,10 @@
 import React, { Component } from "react";
 import { HashRouter, Route, Switch, Redirect } from "react-router-dom";
 import Loadable from "react-loadable";
+import { ToastContainer } from "react-toastify";
+import { NotificationContainer } from "react-notifications";
+import "react-toastify/dist/ReactToastify.css";
+import "react-notifications/lib/notifications.css";
 import auth from "../components/Pages/authService";
 const loading = () => (
   <div className="animated fadeIn pt-3 text-center">
@@ -33,6 +37,8 @@ class App extends Component {
 
     return (
       <React.Fragment>
+         <NotificationContainer />
+          <ToastContainer />
         <HashRouter>
           <Switch>
             <Route exact path="/login" name="Login Page" component={Login} />          

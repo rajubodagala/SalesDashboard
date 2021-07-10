@@ -4,11 +4,13 @@ const apiEndpoint = "/login";
 const tokenKey = "token";
 const rtokenKey = "rtoken";
 const path = "userpath";
+const userid="userid";
 
 
 export async function login(username, password) {
   const { data} = await http.post(apiEndpoint, { username, password });
    localStorage.setItem(tokenKey, data.loginResult[0].UserName);
+   localStorage.setItem(userid, data.loginResult[0].UserId);
    localStorage.setItem(path, "%"+ data.loginResult[0].Path+ '%');
 }
 
@@ -33,6 +35,10 @@ export function getUserPath() {
   return localStorage.getItem(path);
 }
 
+export function getUserId() {
+  return localStorage.getItem(userid);
+}
+
 export function getCurrentUser() {
   try {
     const jwt = localStorage.getItem(tokenKey);  
@@ -42,4 +48,4 @@ export function getCurrentUser() {
   }
 }
 
-export default { login, logout, getCurrentUser,getUserPath, loginWithJwt, getJwt };
+export default { login, logout, getCurrentUser,getUserPath, loginWithJwt, getJwt ,getUserId};

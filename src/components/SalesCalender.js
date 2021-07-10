@@ -78,6 +78,7 @@ render() {
       pickerView
     } = this.state;
     return (
+      <div className={"calendercss"}>
 <MuiPickersUtilsProvider utils={DateFnsUtils}>
 <DatePicker
   value={selectedDate || new Date()}
@@ -97,6 +98,7 @@ render() {
   labelFunc={this.formatWeekSelectLabel}
 />
 </MuiPickersUtilsProvider>
+</div>
 );
 }
 }
