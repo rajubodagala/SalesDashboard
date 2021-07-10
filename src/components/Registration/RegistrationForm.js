@@ -11,7 +11,6 @@ import {
   CardHeader,
 } from "reactstrap";
 import { NotificationManager } from "react-notifications";
-import { toast } from "react-toastify";
 import Select from "../../components/common/select";
 import FormFunc from "../../components/common/formfunc";
 import {

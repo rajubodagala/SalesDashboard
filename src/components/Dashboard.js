@@ -10,7 +10,6 @@ import auth from "./Pages/authService";
 import TranTable from "../components/Grid/TranTable";
 import RegistrationButton from "./Registration/RegistrationButton"
 import "../components/dashboard.css";
-import { months } from "moment";
 
 
 const piedata1 = () => {

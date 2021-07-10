@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import UserImg from "../assets/images/pimage.jpg";
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
