@@ -10,22 +10,8 @@ import auth from "./Pages/authService";
 import TranTable from "../components/Grid/TranTable";
 import RegistrationButton from "./Registration/RegistrationButton"
 import "../components/dashboard.css";
+import { months } from "moment";
 
-var d = new Date();
-var month = new Array();
-month[0] = "JAN";
-month[1] = "FEB";
-month[2] = "MAR";
-month[3] = "APR";
-month[4] = "MAY";
-month[5] = "JUN";
-month[6] = "JUL";
-month[7] = "AUG";
-month[8] = "SEP";
-month[9] = "OCT";
-month[10] = "NOV";
-month[11] = "DEC";
-var currentMonth = month[d.getMonth()];
 
 const piedata1 = () => {
   return {
@@ -48,11 +34,11 @@ const piedata1 = () => {
 };
 const linedata1 = () => {
   return {
-    labels: ["DEC", "JAN", "FEB", "MAR", "APR", "MAY"],
+    labels:  ["JAN", "FEB", "MAR", "APR", "MAY","JUN","JUL","AUG","SEP","OCT","NOV","DEC"],
     datasets: [
       {
         label: "$",
-        data: [250, 330, 500, 450, 700, 970],
+        data:[0,	0,	0	,0,	0,	0,	0,	0,	0,	0,	0,	0],
         fill: false,
         backgroundColor: "rgb(255, 99, 132)",
         borderColor: "rgba(255, 99, 132, 0.2)",
@@ -93,7 +79,7 @@ class Dashboard extends Component {
       piedata: null,
       linedata: null,
       bardata: {
-        labels: ["DEC", "JAN", "FEB", "MAR", "APR", "MAY"],
+        labels: ["JAN", "FEB", "MAR", "APR", "MAY"],
         datasets: [
           {
             label: "# of Blue",
@@ -175,10 +161,16 @@ class Dashboard extends Component {
           list.qRed,
         ];
       });
-console.log(linedatao)
-      data.result[2].map((list, index) => {
-        console.log(list)
-      });
+let key=0;
+      data.result[2].map((list, index) => {   
+        for(var propt in list){
+          if(key!=13){
+          linedatao.datasets[0].data[key]=list[propt];
+        
+          }key++;
+        }        
+    });
+
 
       this.setState({
         transaction: tranobj,

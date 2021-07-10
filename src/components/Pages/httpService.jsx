@@ -2,6 +2,7 @@ import axios from "axios";
 import logger from "./logService";
 import { createHashHistory } from "history";
 axios.defaults.baseURL = 'http://localhost:5557/api';
+// axios.defaults.baseURL = 'http://18.211.31.190/api';
 axios.interceptors.response.use(null, error => {
   const expectedError =
     error.response &&
